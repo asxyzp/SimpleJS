@@ -1,0 +1,92 @@
+/*Setting default styling for the entire page*/
+body{font-size: 16px;}
+
+/*Styling JS logo*/
+img{
+    display: block;
+    margin-right:auto;
+    margin-left:auto;
+    width:50%;
+    margin-top:15px;
+}
+
+/*Styling headings*/
+h1{
+    font-family: 'Roboto slab';
+    text-align: center;
+}
+h2{font-family: 'Roboto slab';}
+
+/*Styling main content boxes*/
+#thumbnail-div{overflow: auto;}
+#content-div{
+    margin-top:10px;
+    overflow: auto;
+}
+
+/*Styling list-group & it's elements*/
+.badge{
+    color: white;
+    background: #000;
+    margin-right:5px;
+}
+.list-group-item{border: 1px solid #ccc;}
+.list{
+    display: flex;
+    flex-direction: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+}
+.list:hover{background: rgb(230,230,230);}
+
+/*Text styling in the webpage*/
+.text{
+    display:block;
+    margin-top:2px;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+}
+.underline{text-decoration: underline;}
+
+/*Styling the code blocks*/
+.code{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    background: #000;
+    padding:2%;
+    font-size: 16px;
+    font-family: monospace;
+    color:white;
+    border-radius: 15px;
+}
+.inline-code{
+    background: #000;
+    font-size: 16px;
+    font-family: monospace;
+    color:white;
+    padding:1px;
+}
+.var{color:orange;}         /*Styling the variable*/
+.var-name{color:#c0c0c0;}   /*Styling variable name*/
+.assg{color:red;}           /*Styling the assignment operator*/
+.comment{color:#80FF00;}    /*Styling the comment*/
+.function{color:#0040C0;}   /*Styling the function*/
+.const-num{color:#FFFF40;}  /*Styling constant numbers*/
+.const-str{color:aqua;}     /*Styling constant numbers*/
+.const-obj{color: #808040;} /*Styling constant objects*/
+.const-boo{color:#FF8040;}  /*Styling constant booleans*/
+.const-arr{color:#00C080;}
+.null{color:#FFC0C0;}       /*Styling null data types*/
+.undefined{color:#C000C0;}  /*Styling undefined data type*/
+.console{color:#FF4040;}    /*Styling console keyword*/
+.log{color:#00C080;}        /*Styling log keyword*/
+.infinity{color:#000080;}   /*Styling infinity & -infinity keywords*/
+.length{color:#FF8080;}
+
+@media(max-width:800px){
+    #thumbnail-div{display: none;}
+}

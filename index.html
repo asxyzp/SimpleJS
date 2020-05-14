@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SimpleJS</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"/>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body>
+        <div id="all-content" class="container-fluid">
+            <div class="row">
+                <div id="thumbnail-div" class="col-md-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS_logo"/>
+                    <h1 class="top-title">SimpleJS</h1>
+                    <p style="text-align:center">A small & simple JavaScript <br>reference by <a href="http://asxyzp.glitch.me" target="_blank">asxyzp</a></p>
+                    
+                    <div class="list-group">
+                        <div id="item-com" class="list-group-item"><span class="badge">1</span> Comments</div>
+                        <div id="item-var" class="list-group-item"><span class="badge">2</span> Variables</div>
+                        <div id="item-str" class="list-group-item"><span class="badge">3</span> String</div>
+                        <div id="item-arr" class="list-group-item"><span class="badge">4</span> Array</div>
+                        <div id="item-arith" class="list-group-item"><span class="badge">5</span> Arithmetic operators</div><!--
+                        <div id="item-comp" class="list-group-item"><span class="badge">6</span> Comparison operators</div>
+                        <div id="item-cond" class="list-group-item"><span class="badge">7</span> Conditionals</div>
+                        <div id="item-obj" class="list-group-item"><span class="badge">8</span> Objects</div>
+                        <div id="item-loop" class="list-group-item"><span class="badge">9</span> Loops</div>
+                        <div id="item-rand" class="list-group-item"><span class="badge">10</span> Random</div>
+                        <div id="item-pars" class="list-group-item"><span class="badge">11</span> parseInt()/Float()</div>
+                        <div id="item-rec" class="list-group-item"><span class="badge">12</span> Recursion</div>-->
+                    </div>
+                </div>
+                <div id="content-div" class="col-md-9">
+                    
+                    <!--comments-->
+                    <div id="inner-content-com">
+                        <h1>Comment</h1>
+                        
+                        <p class="text">A <span class="underline"><strong>comment</strong></span> is a programmer-readable annotation in the source code of the computer program. Comments are used to make source code of the program readable & helps in documenting the code. Comments in JavaScript program are ignored by the JavaScript interpreter.</p>
+                        
+                        <p class="text">In JS, there are two types of comments :</p>
+                        
+                        <p class="text">1. <span class="underline"><b>Single line comment</b></span>:</p>
+                        
+                        <p class="text">A single line comment begins with // & ends at the end-of-line. Here's how it looks like :</p>
+                        
+                        <div class="code">
+                            <div class="comment">//This is a single line comment.</div>
+                            <div class="comment">//Single line comments end with EOL.</div>
+                        </div>
+
+                        <p class="text" style="margin-top:3px;">2. <span class="underline"><b>Multi-line comment </b></span>:</p>
+                        
+                        <p class="text">A Multi-line comment begins with /* & ends with */. Here's how it looks like :</p>
+                        
+                        <div class="code">
+                            <div class="comment">/*This is a</div>
+                            <div class="comment">  multi-line comment.*/</div>
+                        </div>
+                    </div>
+
+                    <!--Variable-->
+                    <div id="inner-content-var">
+                        <h1>Variables</h1>
+                        
+                        <p class="text">A <span class="underline"><strong>variable</strong></span> is the name of the memory location, where the data is stored. In terms of, from where the variable can be accessed, it can be classified into two types :</p>
+                        
+                        <p class="text">1. <span class="underline"><b>Local variable</b></span>: When a variable's value is accessible only within a particular block of code (e.g. function). Thus it's scope is local.</p>
+
+                        <p class="text">2. <span class="underline"><b>Global variable</b></span>: When a variable's value is accessible everywhere within the program. Thus it's scope is global.</p>
+                        
+                        <p class="text underline"><b>Rules for naming a variable :</b></p>
+                        <ol class="list-group">
+                            <li class="list-group-item list"><span class="badge">1</span> Name of the variable can contain characters (a-z)/(A-Z), numbers (0-9), dollar symbol ($) & underscore (_).</li>
+                            <li class="list-group-item list"><span class="badge">2</span> Name of the variable cannot start from a number (0-9).</li>
+                            <li class="list-group-item list"><span class="badge">3</span> Name of the variable is case sensitive. </li>
+                        </ol>
+
+                        <p class="text"><b class="underline">Case sensitivity in JS :</b> Since, JS is case sensitive, so variables with same name, but different casing wouldn't be considered as same.</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">varName</span>;<br>
+                            <span class="comment">//is not same as</span><br>
+                            <span class="var">var</span>
+                            <span class="var-name">VARNAME</span>;<br>
+                            <span class="comment">//is not same as</span><br>
+                            <span class="var">var</span>
+                            <span class="var-name">vArNaMe</span>;
+                        </div>
+
+                        <p class="text underline"><b>Syntax for declaration of a variable :</b></p>
+                        <div class="code">
+                            <span class="var">var&nbsp;<span class="var-name">nameOfVariable</span></span>;
+                        </div>
+
+                        <p class="text"><b class="underline">Initialization</b> of a variable refers to assignment of an initial value to a variable, since uninitialized variable's value by default is <span class="inline-code"><span class="undefined">undefined</span></span>.</p>
+
+                        <p class="text underline"><b>Syntax for declaration & initialization of a variable :</b></p>
+                        <div class="code">
+                            <span class="var">var&nbsp;<span class="var-name">nameOfVariable</span>&nbsp;<span class="assg">=</span>&nbsp;<span class="const-num">15</span></span>;
+                        </div>
+                        <p class="text">The equals to symbol (=) in the above syntax is not the mathematical equals to operator, rather it is the assignment operator, which assigns value on the RHS of the operator to the variable on the LHS of the operator.</p>
+
+                        <p class="text"><b class="underline">Primary data types which can be stored in a variable :</b></p>
+                        <ol class="list-group">
+                            <li class="list-group-item list"><span class="badge">1</span> Number</li>
+                            <li class="list-group-item list"><span class="badge">2</span> String</li>
+                            <li class="list-group-item list"><span class="badge">3</span> Boolean</li>
+                            <li class="list-group-item list"><span class="badge">4</span> Object</li>
+                            <li class="list-group-item list"><span class="badge">5</span> Undefined</li>
+                            <li class="list-group-item list"><span class="badge">6</span> Null</li>
+                        </ol>
+
+                        <p class="text">JavaScript is a <b class="underline">dynamically typed language</b> (like Python, Ruby), which means that same variable can be assigned values of different data types.</p>
+
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">var1</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">123</span>;
+                            <span class="comment">//var1 has stored a number</span><br>
+
+                            <span class="var-name">var1</span>
+                            <span class="assg">=</span>
+                            <span class="const-str">"asxyzp"</span>;
+                            <span class="comment">//var1 has stored a string</span><br>
+
+                            <span class="var-name">var1</span>
+                            <span class="assg">=</span>
+                            <span class="const-obj">{first_name : "John",last_name : "Doe"}</span>;
+                            <span class="comment">//var1 has stored an object</span><br>
+
+                            <span class="var-name">var1</span>
+                            <span class="assg">=</span>
+                            <span class="const-boo">true</span>;
+                            <span class="comment">//var1 has stored an Boolean</span><br>
+                        </div>
+
+                        <h2 class="text underline">Number :</h2>
+                        <p class="text">
+                            JS only has one type of number data type, unlike other programming languages such as C/C++, which has data types such as <span class="inline-code">int</span>,&nbsp;<span class="inline-code">float</span>,&nbsp;<span class="inline-code">double</span> & more. Numbers can be written with or without decimal point. Extra large or extra small numbers can be written with (exponential) scientific notation.
+                        </p>
+
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">number1</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">123</span>&nbsp;;
+                            <span class="comment">//Integer</span><br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">number2</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">123.0</span>&nbsp;;
+                            <span class="comment">//Floating point number</span><br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">number3</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">123e1</span>&nbsp;;
+                            <span class="comment">//=1230 (exponential notaion)</span><br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">number4</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">123e-1</span>&nbsp;;
+                            <span class="comment">//=12.3 (exponential notaion)</span>
+                        </div>
+
+                        <h2 class="text underline">String :</h2>
+                        <p class="text">
+                            String is a series of characters within single quotes <span class="inline-code">'STRING'</span> or double quotes <span class="inline-code">"STRING"</span>. You can use single quotes inside double quotes or double quotes inside single quotes, but using single quotes within single quotes or using double quotes within double quotes will give syntactical error.
+                        </p>
+
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">string1</span>
+                            <span class="assg">=</span>
+                            <span class="const-str">"'Hello' World"</span>&nbsp;;
+                            <span class="comment">//Output = 'Hello' World</span><br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">string2</span>
+                            <span class="assg">=</span>
+                            <span class="const-str">'"Hello" World'</span>&nbsp;;
+                            <span class="comment">//Output = "Hello" World</span><br>
+                        </div>
+
+                        <h2 class="text underline">Adding a number with a string :</h2>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">numStr1</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">10</span>
+                            <span class="op-add">+</span>
+                            <span class="const-num">12</span>
+                            <span class="op-add">+</span>
+                            <span class="const-str">"&nbsp;volvos"</span>;
+                            <span class="comment">//Output = '22 volvos' (string)</span><br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">numStr2</span>
+                            <span class="assg">=</span>
+                            <span class="const-str">"volvo no."</span>
+                            <span class="op-add">+</span>
+                            <span class="const-num">10</span>;
+                            <span class="op-add">+</span>
+                            <span class="const-num">12</span>;
+                            <span class="comment">//Output = 'volvo no. 1012' (string)</span><br>
+                        </div>
+                        <p class="text">In the first case, addition of 10 with 12 happens before the sum is implicitly converted & then concatenated to " volvos", while in the second case, 10 & 12 are directly concated at the end of "volvo no. " without any implicit conversion.</p>
+                        
+                        <h2 class="text underline">Boolean :</h2>
+                        <p class="text">
+                            A boolean variable can only have two values : <span class="inline-code"><span class="const-boo">true</span></span> or <span class="inline-code"><span class="const-boo">false</span></span>. Booleans are used for condition testing.
+                        </p>
+
+                        <div class="code">
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-num">1</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>)
+                            <span class="comment">&nbsp;//output = true</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-num">1</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">2</span>)
+                            <span class="comment">&nbsp;//output = false</span><br>
+                        </div>
+
+                        <h2 class="text underline">Object :</h2>
+                        <p class="text">
+                            An object is a collection of properties, where a property is an association between a name (key) & a value. An object contains a name-value pairs, which are separated by comma (,).
+                        </p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">personObject</span>
+                            <span class="assg">=</span>
+                            <span class="const-obj">{first_name: "Jon",last_name: "Doe",age: 24,location: "Dehradun, India"}</span>;<br>
+                        </div>
+
+                        <h2 class="text underline">Undefined :</h2>
+                        <p class="text">
+                            In JavaScript, a variable which hasn't been initialized, has the default value of <span class="inline-code undefined">undefined</span>. Also, any variable can be emptied by assigning it the value <span class="inline-code undefined">undefined</span>. <span class="inline-code undefined">undefined</span> represents unintentional abscence of object value.
+                        </p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">varName</span>;<br>
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">varName</span>);
+                            <span class="comment">&nbsp;//output = undefined</span><br>
+                            
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>;<br>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="undefined">undefined</span>;<br>
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">varName</span>);
+                            <span class="comment">&nbsp;//output = undefined</span>
+                        </div>
+
+                        <h2 class="text underline">Null :</h2>
+                        <p class="text">
+                            In JavaScript, <span class="inline-code null">null</span> represents intentional abscence of value (unlike <span class="inline-code undefined">undefined</span>, which represents unintentional abscence of value). Data type of null is object.
+                        </p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">varName</span>
+                            <span class="assg">=</span>
+                            <span class="null">null</span>;<br>
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">varName</span>);
+                            <span class="comment">&nbsp;//output = null</span>
+                        </div>
+                    </div>
+
+                    <!--String-->
+                    <div id="inner-content-str">
+                        <h1>String</h1>
+                        <p class="text"><b>String</b> is a sequence of characters, within single quotes or double quotes. A string can contain zero or more characters.</p>
+                        
+                        <b class="text underline">Synatx of a string :</b>
+                        <div class="code"
+                            <span class="var">var</span>
+                            <span class="var-name">strName</span>
+                            <span class="assg">=</span>
+                            <span class="const-str">"C<sub>1</sub>C<sub>2</sub>....C<sub>N</sub>"</span>;
+                            <span class="comment">&nbsp;//A string with N characters where C<sub>i</sub> is a single character</span>                      
+                        </div>
+
+                        <h2 class="text underline">Escaping literal quotes with escape sequence :</h2>
+                        <p class="text"><b class="underline">Q:</b> In the variables section, we had learnt that we can't use "" inside "" or use '' inside '', but if we wanted to use quotes of a single type within another quote, then what should be done to achieve the same?</p>
+                        <p class="text"><b>A:</b> We can escape a "/' inside a "/', by using escape character (or a backlash \) to achive the same.
+                        <br><br>Here's how you can do it :</p>
+                        <div class="code">
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-str">"\"Hello\", world!"</span>);
+                            <span class="comment">&nbsp;//Output = "Hello", world!</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-str">'\'Hello\', world!'</span>);
+                            <span class="comment">&nbsp;//Output = 'Hello', world!</span>
+
+                        </div>
+                        
+                        <p class="text underline"><br>Two reasons to use escape characters :</b></p>
+                        <ol class="list-group">
+                            <li class="list list-group-item"><span class="badge">1</span> Escape characters allows to use characters, which may not otherwise be able to be typed out (e.g. \r - Carraige return).</li>
+                            <li class="list list-group-item"><span class="badge">2</span> Using quotes within quotes.</li>
+                        </ol><br>
+
+                        <p class="text underline"><b>Different escape characters :</b></p>
+                        <div class="code">
+                            /'<span class="comment">&nbsp;//Single quote</span><br>
+                            /"<span class="comment">&nbsp;//Double quote</span><br>
+                            //<span class="comment">&nbsp;//Backlash</span><br>
+                            /n<span class="comment">&nbsp;//New line</span><br>
+                            /t<span class="comment">&nbsp;//Horizontal tab</span><br>
+                            /v<span class="comment">&nbsp;//Vertical tab</span><br>
+                            /r<span class="comment">&nbsp;//Carraige return</span><br>
+                            /f<span class="comment">&nbsp;//Formfeed</span><br>
+                            /b<span class="comment">&nbsp;//Word boundary</span><br>
+                        </div><br>
+
+                        <h2 class="text underline">String concatenation :</h2>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">str1</span>=
+                            <span class="const-str">"STRING1"</span>,
+                            <span class="var-name">str2</span>=
+                            <span class="const-str">"STRING2"</span>,
+                            <span class="var-name">str3</span>;<br>
+
+                            <span class="var-name">str3</span>=
+                            <span class="var-name">str1</span>+
+                            <span class="var-name">str2</span>;
+                            <span class="comment">&nbsp;//Output (for str3) = "STRING1STRING2" (String concatenation)</span>
+
+                            <span class="var-name">str1</span>+=
+                            <span class="var-name">str2</span>;
+                            <span class="comment">&nbsp;//Output (for str1) = "STRING1STRING2" (String concatenation with compound assignment with augmented addition)</span>
+                        </div><br>
+
+                        <h2 class="text underline">Finding the length of a string :</h2>
+                        <div class="code">
+                            <span class="var-name">str2</span>.
+                            <span class="length">length</span>;
+                            <span class="comment">&nbsp;//OUTPUT = 6, as length of "STRING2" is 6</span>
+                        </div><br>
+
+                        <h2 class="text underline">Using [] notation to find characters in a string using index number :</h2>
+                        <p class="text">Bracket notation ([]) is a way to get a character at a specific index in a string. The index starts from 0 & it represents the first character & this is why it's known as <b>zero-based indexing</b>.</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">firstName</span>=
+                            <span class="const-str">"asxyzp"</span>;<br>
+                            
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>[0]);
+                            <span class="comment">&nbsp;//OUTPUT = a</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>[1]);
+                            <span class="comment">&nbsp;//OUTPUT = s</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>[2]);
+                            <span class="comment">&nbsp;//OUTPUT = x</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>[3]);
+                            <span class="comment">&nbsp;//OUTPUT = y</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>[4]);
+                            <span class="comment">&nbsp;//OUTPUT = z</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>[5]);
+                            <span class="comment">&nbsp;//OUTPUT = p</span><br><br>
+
+                            <span class="comment">//How to find last character of a string</span><br>
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>
+                            [<span class="var-name">firstName</span>
+                            .<span class="length">length</span>-
+                            <span class="const-num">1</span>]);
+                            <span class="comment">&nbsp;//OUTPUT = p</span><br><br>
+
+                            <span class="comment">//How to find Nth to last character of a string</span><br>
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>
+                            [<span class="var-name">firstName</span>
+                            .<span class="length">length</span>-
+                            <span class="const-num">N</span>]);
+                        </div>
+
+                        <h2 class="text underline">String immutability :</h2>
+                        <p class="text">Strings in JS are immutable, meaning that they can't be altered by changing individual values of characters by assigning them a value by uisng index. Check this out :</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">firstName</span>
+                            <span class="assg">=</span>
+                            <span class="const-str">"ASXYZP"</span>;<br>
+
+                            <span class="var-name">firstName</span>[0]
+                            <span class="assg">=</span>
+                            <span class="const-str">"L"</span>;<br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">firstName</span>);
+                            <span class="comment">&nbsp;//Output = ASXYZP (No change because of string immutability)</span>
+                        </div>
+                    </div>
+
+                    <!--Array-->
+                    <div id="inner-content-arr">
+                        <h1>Array</h1>
+                        
+                        <p class="text">An <b class="underline">array</b> is a type of data structure, which holds multiple values in a single variable. Unlike C/C++/Java, where array of a particular type can only hold data of that type, array in JavaScript, can hold data of multiple types.</p>
+                        
+                        <p class="text underline"><b>Syntax of declaration of an array :</b></p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">arrName1</span>
+                            <span class="assg">=</span>[
+                            <span class="const-arr">I<sub>1</sub></span>,
+                            <span class="const-arr">I<sub>2</sub></span>,...,
+                            <span class="const-arr">I<sub>N</sub></span>];
+                            <span class="comment">&nbsp;//I<sub>k</sub> represents kth item in the array, which could be data of any type (number, string, boolean, object, ..).</span><br><br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">userDetails</span>
+                            <span class="assg">=</span>[
+                            <span class="const-arr">12563622262</span>,
+                            <span class="const-arr">"John"</span>,
+                            <span class="const-arr">"Doe"</span>,
+                            <span class="const-arr">"DED"</span>];
+                            <span class="comment">&nbsp;//An array with a name 'userDetails' is storing the userID, first name, last name & location of the user in an array</span>
+                        </div>
+                        
+                        <p class="text underline"><b>Example of declaration of multi-dimensional array by nesting one array into another array :</b></p>
+
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">studentDetails</span>
+                            <span class="assg">=</span>[
+                            [[<span class="const-str">"John"</span>,<span class="const-str">"Doe"</span>],73737, <span class="const-str">"Engineering"</span>],
+                            [[<span class="const-str">"Mogola"</span>,<span class="const-str">"Roy Choudhury"</span>],74467, <span class="const-str">"Arts"</span>]
+                            ];<span class="comment">&nbsp;//A multi-dimensional array, which stores an array containing the first name & last name, studentID & stream</span>
+                        </div>
+
+                        <h2 class="text underline">Accessing array elements with index no. :</h2>
+                        <p class="text">Similar to a string, we can access individual elements of an array using bracket notation ([]) & an index number. Also, similar to a string, array uses a zero-based indexing.</p>
+
+                        <p class="text underline"><b>Example of accessing array data using [] & index no. :</b></p>
+                        <div class="code">
+                            <span class="comment">//How to access elements from a single dimensional array :</span><br>
+                            <span class="var">var</span>
+                            <span class="var-name">numArr</span>=[
+                            <span class="const-num">10</span>,
+                            <span class="const-num">20</span>,
+                            <span class="const-num">30</span>];<br>
+                            
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">0</span>];
+                            <span class="comment">&nbsp;//Output = 10</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">1</span>];
+                            <span class="comment">&nbsp;//Output = 20</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">2</span>];
+                            <span class="comment">&nbsp;//Output = 30</span><br><br>
+
+                            <span class="comment">//How to access elements from a multi dimensional array :</span><br>
+                            <span class="var">var</span>
+                            <span class="var-name">studentDetails</span>
+                            <span class="assg">=</span>[
+                            [[<span class="const-str">"John"</span>,<span class="const-str">"Doe"</span>],73737, <span class="const-str">"Engineering"</span>],
+                            [[<span class="const-str">"Mogola"</span>,<span class="const-str">"Roy Choudhury"</span>],74467, <span class="const-str">"Arts"</span>]];<br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">0</span>][
+                            <span class="const-num">0</span>][
+                            <span class="const-num">0</span>];
+                            <span class="comment">&nbsp;//Output = "John"</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">0</span>][
+                            <span class="const-num">0</span>][
+                            <span class="const-num">1</span>];
+                            <span class="comment">&nbsp;//Output = "Doe"</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">0</span>][
+                            <span class="const-num">1</span>];
+                            <span class="comment">&nbsp;//Output = 73737</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">0</span>][
+                            <span class="const-num">2</span>];
+                            <span class="comment">&nbsp;//Output = "Engineering"</span>
+                        </div>
+
+                        <h2 class="text underline">Modifying array elements with index no. :</h2>
+                        <p class="text">Unlike strings which are an immutable data type, meaning that they can't be modified by changing characters by using bracket notation ([]) with an index number, array elements can be modified by using the same. Here's an example of how the same can be achieved :</p>
+
+                        <div class="code">
+                            <span class="comment">//How to modify elements from a single dimensional array :</span><br>
+                            <span class="var">var</span>
+                            <span class="var-name">numArr</span>=[
+                            <span class="const-num">10</span>,
+                            <span class="const-num">20</span>,
+                            <span class="const-num">30</span>];<br>
+
+                            <span class="var-name">numArr</span>[
+                            <span class="const-num">1</span>]
+                            <span class="assg">=</span>
+                            <span class="const-num">40</span>;
+                            <span class="comment">&nbsp;//Output (of numArr) = [10,40,30]</span><br><br>
+
+                            <span class="comment">//Process of changing the changing the element of a multi-dimensional array is the same as the process of changing the element of a single-dimensional array.</span>
+                        </div>
+                        
+                        <h2 class="text underline">push() :</h2>
+                        <p class="text"><b>push()</b> is a function, which appends data at the end of the array.</p>
+                        
+                        <p class="text"><b class="underline">Syntax of push() function :</b></p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">arrName</span>=[
+                            <span class="const-num">I<sub>1</sub></span>,
+                            <span class="const-num">I<sub>2</sub></span>,...,
+                            <span class="const-num">I<sub>N</sub></span>];<br>
+
+                            <span class="var-name">arrName</span>.
+                            <span class="function">push</span>(
+                            <span class="const-num">I<sub>N+1</sub></span>);
+                            <span class="comment">&nbsp;//I<sub>N+1</sub> is the value which will be pushed at the end of the array, making the array arrName = [I<sub>1</sub>,...,I<sub>N+1</sub>]</span>
+                        </div>
+
+                        <h2 class="text underline">pop() :</h2>
+                        <p class="text"><b>pop()</b> is a function, which removes array element from the end of the array & returning the value, which has been removed.</p>
+                        
+                        <p class="text"><b class="underline">Syntax of pop() function :</b></p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">arrName</span>=[
+                            <span class="const-num">I<sub>1</sub></span>,
+                            <span class="const-num">I<sub>2</sub></span>,...,
+                            <span class="const-num">I<sub>N</sub></span>];<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">valueReturned</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">arrName</span>.
+                            <span class="function">pop</span>();
+                            <span class="comment">&nbsp;//I<sub>N</sub> is the value which will be poped out of the array, making the array arrName = [I<sub>1</sub>,...,I<sub>N-1</sub>]</span>
+                        </div>
+
+                        <h2 class="text underline">shift() :</h2>
+                        <p class="text"><b>shift()</b> is a function, which removes array element from the beginning of the array, unlike pop(), which remove array element from the end of the array.</p>
+                        
+                        <p class="text"><b class="underline">Syntax of shift() function :</b></p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">arrName</span>=[
+                            <span class="const-num">I<sub>1</sub></span>,
+                            <span class="const-num">I<sub>2</sub></span>,...,
+                            <span class="const-num">I<sub>N</sub></span>];<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">valueReturned</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">arrName</span>.
+                            <span class="function">shift</span>();
+                            <span class="comment">&nbsp;//I<sub>1</sub> is the value which will be shifted out of the array, making the array arrName = [I<sub>2</sub>,...,I<sub>N</sub>]</span><br>
+                        </div>
+
+                        <h2 class="text underline">unshift() :</h2>
+                        <p class="text"><b>unshift()</b> is a function, which adds an array element at the beginning of the array, unlike push(), which adds array element at the end of the array.</p>
+                        
+                        <p class="text"><b class="underline">Syntax of unshift() function :</b></p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">arrName</span>=[
+                            <span class="const-num">I<sub>1</sub></span>,
+                            <span class="const-num">I<sub>2</sub></span>,...,
+                            <span class="const-num">I<sub>N</sub></span>];<br>
+
+                            <span class="var-name">arrName</span>.
+                            <span class="function">shift</span>(I<sub>N+1</sub>);
+                            <span class="comment">&nbsp;//I<sub>1</sub> is the value which will be shifted out of the array, making the array arrName = [I<sub>2</sub>,...,I<sub>N+1</sub>]</span><br>
+                        </div>
+                    </div>
+
+                    <!--JS Arithmetic-->
+                    <div id="inner-content-arith">
+                        <h1>Arithmetic operators</h1>
+                        <p class="text">Arithmetic operators take numerical values literals or variables & return a single numerical value after computation.</p>
+                        
+                        
+                        <h2 class="text underline">Addition operator (+) :</h2>
+                        <p class="text">Addition operator takes two numbers as operand & returns their computational sum as output. It can also be used for concatenation of two string (this is covered in the string section).</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">y</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">2</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>+
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = 2</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-boo">true</span>+
+                            <span class="const-boo">true</span>);
+                            <span class="comment">&nbsp;//Output = 2</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-boo">true</span>+
+                            <span class="const-boo">false</span>);
+                            <span class="comment">&nbsp;//Output = 1</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-boo">false</span>+
+                            <span class="const-boo">false</span>);
+                            <span class="comment">&nbsp;//Output = 0</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-boo">true</span>+
+                            <span class="const-str">"Hello"</span>);
+                            <span class="comment">&nbsp;//Output = "1Hello" (string)</span><br>
+                        </div>
+
+                        <h2 class="text underline">Subtraction operator (-) :</h2>
+                        <p class="text">Subtraction operator takes two numbers as operand & returns their computational difference as output.</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">y</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">2</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>-
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = -1</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-boo">10</span>-
+                            <span class="const-boo">"Hello"</span>);
+                            <span class="comment">&nbsp;//Output = NaN (not-a-number)</span>
+                        </div>
+
+                        <h2 class="text underline">Multiplication operator (*) :</h2>
+                        <p class="text">Multiplication operator takes two numbers as operand & returns their computational multiplication as output.</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">y</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">2</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>*
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = 2</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="infinity">Infinity</span>*
+                            <span class="infinity">Infinity</span>);
+                            <span class="comment">&nbsp;//Output = Infinity</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="infinity">Infinity</span>*
+                            <span class="infinity">-Infinity</span>);
+                            <span class="comment">&nbsp;//Output = -Infinity</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="infinity">Infinity</span>*
+                            <span class="infinity">0</span>);
+                            <span class="comment">&nbsp;//Output = NaN (not-a-number)</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="const-num">2</span>*
+                            <span class="const-str">"STRING"</span>);
+                            <span class="comment">&nbsp;//Output = NaN (not-a-number)</span><br>
+                        </div>
+
+                        <h2 class="text underline">Division operator (/) :</h2>
+                        <p class="text">Division operator takes two numbers as operand & returns their computational division as output.</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">y</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">2</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>/
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = 0.5</span><br>
+
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>/
+                            <span class="var-name">0</span>;
+                            <span class="comment">&nbsp;//Output = Infinity</span><br>
+
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>/
+                            <span class="var-name">-0</span>;
+                            <span class="comment">&nbsp;//Output = -Infinity</span><br>
+                        </div>
+
+                        <h2 class="text underline">Basic arithmetic operators on floats :</h2>
+                        <p class="text">Basic arithmetic operators (+,-,*,%) work exactly on floating point numbers as they work integers (as seen above).</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1.2</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">y</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">2.4</span>;<br>
+
+                            <span class="var">var</span>
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>+
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = 3.6</span><br>
+
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>-
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = -1.2</span><br>
+
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>*
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = 2.88</span><br>
+
+                            <span class="var-name">z</span>
+                            <span class="assg">=</span>
+                            <span class="var-name">x</span>/
+                            <span class="var-name">y</span>;
+                            <span class="comment">&nbsp;//Output = 0.5</span><br>
+                        </div>
+
+                        <h2 class="text underline">Increment operator (++) :</h2>
+                        <p class="text">Increment operator increases the value of the variable by 1</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>;<br>
+
+                            <span class="var-name">x</span>++;
+                            <span class="comment">&nbsp;//Output = 2 (Is equivalent to x=x+1)</span><br>
+                        </div>
+                        <p class="text underline" style="font-weight:bold;margin-top:5px;">But, there are two types of increment operators :</p>
+                        <ol class="list-group">
+                            <li class="list list-group-item"><b>++x (Prefix increment) </b> : It increases the value of x, before returning the value.</li>
+                            <li class="list list-group-item"><b>x++ (Postfix increment)</b> : It increases the value of x, after returning the value.</li>
+                        </ol>
+
+                        <b class="text underline">Example of prefix & postfix increment :</b>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">10</span>;<br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">++x</span>);
+                            <span class="comment">&nbsp;//Output = 11, Value returned after printing = 11</span><br>
+
+                            <span class="console">console</span>.
+                            <span class="log">log</span>(
+                            <span class="var-name">x++</span>);
+                            <span class="comment">&nbsp;//Output = 11, Value returned after printing = 12</span>
+                        </div>   
+
+                        <h2 class="text underline">Decrement operator (--) :</h2>
+                        <p class="text">Decrement operator decreases the value of the variable by 1</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">1</span>;<br>
+
+                            --<span class="var-name">x</span>;
+                            <span class="comment">&nbsp;//Output = 0 (Is equivalent to x=x-1)</span><br>
+                        </div>
+                        <p class="text underline" style="font-weight:bold;margin-top:5px;">Once again, just like increment operators, there are two types of decrement operators :</p>
+                        <ol class="list-group">
+                            <li class="list list-group-item"><b>--x (Prefix decrement) </b>: It decreases the value of x, before returning the value.</li>
+                            <li class="list list-group-item"><b>x-- (Postfix decrement)</b>: It decreases the value of x, after returning the value.</li>
+                        </ol>
+
+                        <h2 class="text underline">Remainder operator (%) :</h2>
+                        <p class="text">Remainder operator returns the remainder of division of two numbers. It is not the same as modulo function, because it doesn't returns the correct value of (-p)mod(m), where -p < 0 & m > 0. It can also be used to check, whether an integer is even or odd (e.g. 5%2=1, 4%2=0).</p>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">5</span>;<br>
+
+                            <span class="var-name">x</span>%
+                            <span class="const-num">4</span>;
+                            <span class="comment">&nbsp;//Output = 1</span><br>
+                        </div>
+
+                        <h2 class="text underline">Compound assignment with augmented opration (+=, -=, *=, /=) :</h2>
+                        <div class="code">
+                            <span class="var">var</span>
+                            <span class="var-name">x</span>
+                            <span class="assg">=</span>
+                            <span class="const-num">10</span>;<br>
+
+                            <span class="var-name">x</span>+=
+                            <span class="const-num">10</span>;
+                            <span class="comment">&nbsp;//Output = 20 | x+=10 is same as x=x+10</span><br>
+
+                            <span class="var-name">x</span>-=
+                            <span class="const-num">10</span>;
+                            <span class="comment">&nbsp;//Output = 10 | x-=10 is same as x=x-10</span><br>
+
+                            <span class="var-name">x</span>*=
+                            <span class="const-num">2</span>;
+                            <span class="comment">&nbsp;//Output = 20 | x*=10 is same as x=x*10</span><br>
+
+                            <span class="var-name">x</span>/=
+                            <span class="const-num">10</span>;
+                            <span class="comment">&nbsp;//Output = 2 | x/=10 is same as x=x/10</span><br>
+                        </div>
+                    </div>
+
+                    <div id="inner-content-comp">
+                        <h1>Comparison operators</h1>
+                    </div>
+                    <div id="inner-content-cond">
+                        <h1>Conditionals (if, else, else if, switch)</h1>
+                    </div>
+                    <div id="inner-content-obj">
+                        <h1>Objects</h1>
+                    </div>
+                    <div id="inner-content-loop">
+                        <h1>Loops (for, while, do-while)</h1>
+                    </div>
+
+                    <div id="inner-content-rand">
+                        <h1>Random</h1>
+                    </div>
+                    <div id="inner-content-pars">
+                        <h1>parseInt() & parseFloat()</h1>
+                    </div>
+                    <div id="inner-content-rec">
+                        <h1>Recursion</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
