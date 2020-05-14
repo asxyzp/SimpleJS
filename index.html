@@ -18,7 +18,12 @@
                     <h1 class="top-title">SimpleJS</h1>
                     <p style="text-align:center">A small & simple JavaScript <br>reference by <a href="http://asxyzp.glitch.me" target="_blank">asxyzp</a></p>
                     
-                    <div class="list-group">
+                    <div class="toggle-dark">
+                       <button type="button" id="menu" class="btn btn-primary">Menu</button>
+                       <button type="button" id="darkLight" class="btn btn-dark" onclick="lightOrDark();">Dark/Light</button> 
+                    </div>
+
+                    <div id="menu-links" class="list-group">
                         <div id="item-com" class="list-group-item"><span class="badge">1</span> Comments</div>
                         <div id="item-var" class="list-group-item"><span class="badge">2</span> Variables</div>
                         <div id="item-str" class="list-group-item"><span class="badge">3</span> String</div>

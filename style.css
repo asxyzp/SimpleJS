@@ -1,6 +1,15 @@
 /*Setting default styling for the entire page*/
 body{font-size: 16px;}
 
+.toggle-dark{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:1%;
+}
+.btn-dark{
+    margin-left:1%;
+}
 /*Styling JS logo*/
 img{
     display: block;
@@ -88,5 +97,6 @@ h2{font-family: 'Roboto slab';}
 .length{color:#FF8080;}
 
 @media(max-width:800px){
-    #thumbnail-div{display: none;}
+    .btn-primary{display:block;}
+    img{width:30%;}
 }

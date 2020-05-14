@@ -1,4 +1,41 @@
+var lightDarkCount = 0;
+
+function lightOrDark(){
+    lightDarkCount++;
+    if(lightDarkCount%2==0){
+        $("body").css("background-color","white");
+        $("body").css("color","black");
+        $(".code").css("background","black");
+        $(".code").css("color","white");
+        $(".inline-code").css("background","black");
+        $(".inline-code").css("color","white");
+        $("#darkLight").addClass("btn-dark");
+        $("#darkLight").removeClass("btn-light");
+        $(".list-group-item").css("color","black");
+        $(".comment").css("color","#80FF00");
+        $(".var-name").css("color","#c0c0c0");
+    }
+    else if(lightDarkCount%2==1)
+    {        
+        $("body").css("background-color","black");
+        $("body").css("color","white");
+        $(".code").css("background","white");
+        $(".code").css("color","black");
+        $(".inline-code").css("background","white");
+        $(".inline-code").css("color","black");
+        $("#darkLight").addClass("btn-light");
+        $("#darkLight").removeClass("btn-dark");
+        $(".list-group-item").css("color","black");
+        $(".comment").css("color","#0E4D92");
+        $(".var-name").css("color","rgb(0,0,255)");
+    }
+}
+
 $(document).ready(function(){
+     $("#menu").click(function(){
+         $("#menu-links").toggle();
+     });    
+
     //Initially only comment thumbnail would be active & content of comment will be shown
     $("#item-com").addClass("active");
     $("#inner-content-var").css("display","none");
